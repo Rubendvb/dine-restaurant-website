@@ -1,0 +1,48 @@
+@use './variables' as v;
+
+@mixin heading-xl {
+  font-size: 8rem;
+  line-height: 80px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  color: v.$mirage;
+}
+
+@mixin heading-large {
+  font-size: 4.8rem;
+  line-height: 48px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: v.$ebony-clay;
+}
+
+@mixin heading-medium {
+  font-size: 2rem;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  color: v.$mirage;
+}
+
+@mixin heading-small {
+  font-size: 1.7rem;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: v.$neutral-dark-gray;
+}
+
+@mixin text-medium {
+  font-size: 2rem;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: v.$ebony-clay;
+}
+
+@mixin text-small {
+  @include text-medium;
+  font-size: 1.6rem;
+  line-height: 26px;
+  color: v.$mirage;
+}
