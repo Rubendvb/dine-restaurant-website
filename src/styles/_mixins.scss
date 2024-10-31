@@ -1,4 +1,4 @@
-@use './variables' as v;
+@use './variables' as *;
 
 @mixin heading-xl {
   font-size: 8rem;
@@ -13,7 +13,7 @@
   line-height: 48px;
   font-weight: 700;
   letter-spacing: -0.5px;
-  color: v.$ebony-clay;
+  color: $ebony-clay;
 }
 
 @mixin heading-medium {
@@ -21,7 +21,7 @@
   line-height: 24px;
   font-weight: 700;
   letter-spacing: -0.25px;
-  color: v.$mirage;
+  color: $mirage;
 }
 
 @mixin heading-small {
@@ -29,7 +29,7 @@
   line-height: 28px;
   font-weight: 600;
   letter-spacing: 2.5px;
-  color: v.$neutral-dark-gray;
+  color: $neutral-dark-gray;
 }
 
 @mixin text-medium {
@@ -37,12 +37,42 @@
   line-height: 30px;
   font-weight: 400;
   letter-spacing: 0px;
-  color: v.$ebony-clay;
+  color: $ebony-clay;
 }
 
 @mixin text-small {
   @include text-medium;
   font-size: 1.6rem;
   line-height: 26px;
-  color: v.$mirage;
+  color: $mirage;
+}
+
+@mixin button-base {
+  background-color: transparent;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  line-height: 16px;
+  height: 64px;
+  padding: 0 54px;
+}
+
+@mixin btn-dark-normal($mode: dark) {
+  @include button-base;
+
+  color: if($mode == dark, $white, $cod-gray);
+  border: 1px solid if($mode == dark, $white, $cod-gray);
+  font-weight: 600;
+  letter-spacing: 2.5px;
+
+  &:hover {
+    background-color: if($mode == dark, $white, $cod-gray);
+    color: if($mode == dark, $mirage, $white);
+    cursor: pointer;
+  }
+
+  &:disabled {
+    opacity: 0.25;
+    cursor: default;
+    pointer-events: none;
+  }
 }
