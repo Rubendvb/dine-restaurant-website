@@ -1,29 +1,10 @@
-import { Logo } from '../../components/Logo'
-
+import Hero from '../../components/Hero'
 import './Home.scss'
 
 export function Home() {
   return (
     <>
-      <header>
-        <img
-          src="/images/homepage/hero-bg-mobile@2x.jpg"
-          alt="hero-bg-mobile"
-        />
-
-        <Logo />
-
-        <div>
-          <h1>Exquisite dining since 1989</h1>
-
-          <p>
-            Experience our seasonal menu in beautiful country surroundings. Eat
-            the freshest produce from the comfort of our farmhouse.
-          </p>
-
-          <button>Book a table</button>
-        </div>
-      </header>
+      <Hero />
       Enjoyable place for all the family Our relaxed surroundings make dining
       with us a great experience for everyone. We can even arrange a tour of the
       farm before your meal. The most locally sourced food All our ingredients

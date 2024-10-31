@@ -1,0 +1,53 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.hero {
+  position: relative;
+
+  &__img {
+    width: 100%;
+    filter: contrast(0.8);
+  }
+
+  &__content {
+    position: absolute;
+    width: 100%;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $cod-gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 24px 0;
+    height: -webkit-fill-available;
+
+    svg {
+      margin-bottom: 36px;
+    }
+
+    &__h1 {
+      font-size: 3.2rem;
+      color: $white;
+      font-weight: 300;
+      letter-spacing: -0.4px;
+      text-align: center;
+      text-wrap: wrap;
+      line-height: 40px;
+      width: 200px;
+    }
+
+    &__p {
+      font-size: 1.6rem;
+      color: #fff;
+      line-height: 26px;
+      text-align: center;
+      font-weight: 400;
+      margin-bottom: 53px;
+    }
+
+    &__btn {
+      @include btn-dark-normal(dark);
+    }
+  }
+}
