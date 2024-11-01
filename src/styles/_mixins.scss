@@ -78,3 +78,7 @@
     pointer-events: none;
   }
 }
+
+@mixin padding-container {
+  padding: 0 24px;
+}

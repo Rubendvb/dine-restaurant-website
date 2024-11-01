@@ -1,9 +1,10 @@
 @use '../../styles/mixins' as *;
 
 .family-experience {
+  @include padding-container;
+
   position: relative;
   top: -65px;
-  padding: 0 24px;
 
   &-place {
     display: flex;

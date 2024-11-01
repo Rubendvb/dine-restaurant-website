@@ -1,6 +1,7 @@
 import { FamilyExperience } from '../../components/FamilyExperience'
 import Hero from '../../components/Hero'
 import { Logo } from '../../components/Logo'
+import { MenuHighlights } from '../../components/MenuHighlights'
 
 import './Home.scss'
 
@@ -12,45 +13,7 @@ export function Home() {
       <main className="main-content">
         <FamilyExperience />
 
-        <section className="section-menu-highlights">
-          <article className="menu-highlights-content">
-            <h2 className="menu-title">A few highlights from our menu</h2>
-            <p className="menu-text">
-              We cater for all dietary requirements, but here’s a glimpse at
-              some of our diner’s favourites. Our menu is revamped every season.
-            </p>
-
-            <div className="menu-item">
-              <img src="/images/homepage/salmon-mobile@2x.jpg" alt="salmon" />
-              <h3 className="menu-item-title">Seared Salmon Fillet</h3>
-              <p className="menu-item-description">
-                Our locally sourced salmon served with a refreshing buckwheat
-                summer salad.
-              </p>
-            </div>
-
-            <div className="menu-item">
-              <img src="/images/homepage/beef-mobile@2x.jpg" alt="beef" />
-              <h3 className="menu-item-title">Rosemary Filet Mignon</h3>
-              <p className="menu-item-description">
-                Our prime beef served to your taste with a delicious choice of
-                seasonal sides.
-              </p>
-            </div>
-
-            <div className="menu-item">
-              <img
-                src="/images/homepage/chocolate-mobile@2x.jpg"
-                alt="chocolate mousse"
-              />
-              <h3 className="menu-item-title">Summer Fruit Chocolate Mousse</h3>
-              <p className="menu-item-description">
-                Creamy mousse combined with summer fruits and dark chocolate
-                shavings.
-              </p>
-            </div>
-          </article>
-        </section>
+        <MenuHighlights />
 
         <section className="section-events">
           <img

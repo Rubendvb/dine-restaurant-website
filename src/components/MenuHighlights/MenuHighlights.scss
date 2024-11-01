@@ -1,0 +1,75 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.menu-highlights {
+  @include padding-container;
+
+  background-color: $cod-gray;
+  padding-top: 72px;
+  padding-bottom: 120px;
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 86px;
+
+    img {
+      margin-bottom: 36px;
+    }
+  }
+
+  &-title {
+    @include heading-large;
+
+    color: $white;
+    font-size: 3.2rem;
+    line-height: 40px;
+    text-wrap: pretty;
+    margin-bottom: 12px;
+  }
+
+  &-text {
+    @include text-medium;
+
+    color: $white;
+    font-size: 1.6rem;
+    line-height: 26px;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .menu-item {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding-bottom: 54px;
+
+      &:last-child {
+        border: 0;
+        padding-bottom: 0;
+      }
+
+      img {
+        margin-bottom: 36px;
+      }
+
+      &-title {
+        @include text-medium;
+
+        font-weight: 700;
+        color: $white;
+        line-height: 24px;
+        letter-spacing: -0.25px;
+        margin-bottom: 6px;
+      }
+
+      &-description {
+        @include text-small;
+
+        color: white;
+      }
+    }
+  }
+}
