@@ -21,8 +21,8 @@ export function MenuHighlights() {
           <img src="/images/homepage/salmon-mobile@2x.jpg" alt="salmon" />
           <h3 className="menu-item-title">Seared Salmon Fillet</h3>
           <p className="menu-item-description">
-            Our locally sourced salmon served with a refreshing buckwheat summer
-            salad.
+            Our locally sourced salmon served <br /> with a refreshing buckwheat
+            summer salad.
           </p>
         </div>
 
@@ -30,8 +30,8 @@ export function MenuHighlights() {
           <img src="/images/homepage/beef-mobile@2x.jpg" alt="beef" />
           <h3 className="menu-item-title">Rosemary Filet Mignon</h3>
           <p className="menu-item-description">
-            Our prime beef served to your taste with a delicious choice of
-            seasonal sides.
+            Our prime beef served to your taste <br /> with a delicious choice
+            of seasonal <br /> sides.
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export function MenuHighlights() {
           />
           <h3 className="menu-item-title">Summer Fruit Chocolate Mousse</h3>
           <p className="menu-item-description">
-            Creamy mousse combined with summer fruits and dark chocolate
+            Creamy mousse combined with <br /> summer fruits and dark chocolate
             shavings.
           </p>
         </div>

@@ -6,7 +6,7 @@
 
   background-color: $cod-gray;
   padding-top: 72px;
-  padding-bottom: 120px;
+  padding-bottom: 102px;
 
   &-header {
     display: flex;
@@ -45,6 +45,10 @@
     .menu-item {
       border-bottom: 1px solid rgba(255, 255, 255, 0.15);
       padding-bottom: 54px;
+
+      &:nth-child(2) {
+        padding-bottom: 28px;
+      }
 
       &:last-child {
         border: 0;
