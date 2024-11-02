@@ -1,8 +1,9 @@
+import { Button } from '../Button'
 import { Logo } from '../Logo'
 
 import './Hero.scss'
 
-export default function Hero() {
+export function Hero() {
   return (
     <header className="hero">
       <img
@@ -21,7 +22,7 @@ export default function Hero() {
           the freshest produce from the comfort of our farmhouse.
         </p>
 
-        <button className="hero__content__btn">Book a table</button>
+        <Button theme="dark" text="Book a table" />
       </div>
     </header>
   )

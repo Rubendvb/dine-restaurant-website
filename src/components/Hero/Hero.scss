@@ -46,9 +46,5 @@
       font-weight: 400;
       margin-bottom: 53px;
     }
-
-    &__btn {
-      @include btn-dark-normal(dark);
-    }
   }
 }

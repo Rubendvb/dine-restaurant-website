@@ -1,5 +1,6 @@
+import { Events } from '../../components/Events'
 import { FamilyExperience } from '../../components/FamilyExperience'
-import Hero from '../../components/Hero'
+import { Hero } from '../../components/Hero'
 import { Logo } from '../../components/Logo'
 import { MenuHighlights } from '../../components/MenuHighlights'
 
@@ -15,42 +16,7 @@ export function Home() {
 
         <MenuHighlights />
 
-        <section className="section-events">
-          <img
-            className="events-image"
-            src="/images/homepage/family-gathering-mobile@2x.jpg"
-            alt="Family gathering"
-          />
-
-          <ul className="events-list">
-            <li className="event-item">Family Gathering</li>
-            <li className="event-item">Special Events</li>
-            <li className="event-item">Social Events</li>
-          </ul>
-
-          <h2 className="events-title">Family Gathering</h2>
-          <p className="events-description">
-            We love catering for entire families. So please bring everyone along
-            for a special meal with your loved ones. We’ll provide a memorable
-            experience for all.
-          </p>
-
-          <h2 className="events-title">Special Events</h2>
-          <p className="events-description">
-            Whether it’s a romantic dinner or special date you’re celebrating
-            with others, we’ll look after you. We’ll be sure to mark your
-            special date with an unforgettable meal.
-          </p>
-
-          <h2 className="events-title">Social Events</h2>
-          <p className="events-description">
-            Are you looking to have a larger social event? No problem! We’re
-            more than happy to cater for big parties. We’ll work with you to
-            make your event a hit with everyone.
-          </p>
-
-          <button className="button-book">Book a table</button>
-        </section>
+        <Events />
 
         <section className="section-reservation">
           <h2 className="reservation-title">Ready to make a reservation?</h2>

@@ -8,8 +8,8 @@
   color: v.$mirage;
 }
 
-@mixin heading-large {
-  font-size: 4.8rem;
+@mixin heading-large($font-size: 4.8rem) {
+  font-size: $font-size;
   line-height: 48px;
   font-weight: 700;
   letter-spacing: -0.5px;
@@ -42,33 +42,33 @@
   text-align: center;
 }
 
-@mixin text-small {
+@mixin text-small($color: $mirage) {
   @include text-medium;
   font-size: 1.6rem;
   line-height: 26px;
-  color: $mirage;
+  color: $color;
 }
 
 @mixin button-base {
-  background-color: transparent;
   font-size: 1.7rem;
   text-transform: uppercase;
   line-height: 16px;
   height: 64px;
-  padding: 0 54px;
+  width: 24.5rem;
 }
 
-@mixin btn-dark-normal($mode: dark) {
+@mixin btn-theme($theme) {
   @include button-base;
 
-  color: if($mode == dark, $white, $cod-gray);
-  border: 1px solid if($mode == dark, $white, $cod-gray);
+  color: $white;
+  background-color: if($theme == dark, transparent, $cod-gray);
+  border: 1px solid if($theme == dark, $white, $cod-gray);
   font-weight: 600;
   letter-spacing: 2.5px;
 
   &:hover {
-    background-color: if($mode == dark, $white, $cod-gray);
-    color: if($mode == dark, $mirage, $white);
+    background-color: if($theme == dark, $white, transparent);
+    color: if($theme == dark, $mirage, $cod-gray);
     cursor: pointer;
   }
 
