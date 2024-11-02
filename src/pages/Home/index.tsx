@@ -3,6 +3,7 @@ import { FamilyExperience } from '../../components/FamilyExperience'
 import { Hero } from '../../components/Hero'
 import { Logo } from '../../components/Logo'
 import { MenuHighlights } from '../../components/MenuHighlights'
+import { Reservation } from '../../components/Reservation'
 
 import './Home.scss'
 
@@ -18,10 +19,7 @@ export function Home() {
 
         <Events />
 
-        <section className="section-reservation">
-          <h2 className="reservation-title">Ready to make a reservation?</h2>
-          <button className="button-book">Book a table</button>
-        </section>
+        <Reservation />
       </main>
 
       <footer className="footer">
