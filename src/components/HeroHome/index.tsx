@@ -1,9 +1,9 @@
 import { Button } from '../Button'
 import { Logo } from '../Logo'
 
-import './Hero.scss'
+import './HeroHome.scss'
 
-export function Hero() {
+export function HeroHome() {
   return (
     <header className="hero">
       <img
