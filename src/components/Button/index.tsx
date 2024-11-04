@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import './Button.scss'
 
 interface ButtonProps {
@@ -6,5 +8,11 @@ interface ButtonProps {
 }
 
 export function Button({ theme = 'light', text }: ButtonProps) {
-  return <button className={`btn btn-${theme}`}>{text}</button>
+  return (
+    <>
+      <Link className={`btn btn-${theme}`} to={`booking`}>
+        {text}
+      </Link>
+    </>
+  )
 }
