@@ -21,42 +21,120 @@ export function Booking() {
         <Button text="Reserve place" theme="dark" />
       </header>
 
-      <form className="booking-form">
-        <div className="booking-form-names">
-          <input type="text" placeholder="Name" />
-          <input type="text" placeholder="Email" />
-        </div>
+      <section className="booking-section">
+        <div className="booking-section-container">
+          <form className="booking-form">
+            <div className="booking-form-group">
+              <input
+                className="booking-input"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+              />
+              <span className="booking-input-error">
+                This field is required
+              </span>
+            </div>
 
-        <div className="booking-form-names">
-          <label htmlFor="date" className="booking-label">
-            Pick a date
-          </label>
-          <input type="date" name="date" id="date" className="booking-input" />
-        </div>
+            <div className="booking-form-group">
+              <input
+                className="booking-input"
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Email"
+              />
+              <span className="booking-input-error">
+                This field is required
+              </span>
+            </div>
 
-        <div className="booking-form-names">
-          <label htmlFor="time" className="booking-label">
-            Pick a time
-          </label>
-          <input type="time" name="time" id="time" className="booking-input" />
-        </div>
+            <div className="booking-form-date">
+              <label className="booking-label">Pick a date</label>
 
-        <div>
-          <label htmlFor="people" className="booking-label">
-            4 people
-          </label>
-          <input
-            type="number"
-            name="people"
-            id="people"
-            className="booking-input"
-            min={1}
-            max={10}
-          />
-        </div>
+              <div className="booking-date-inputs">
+                <div>
+                  <input
+                    className="booking-input booking-date-input"
+                    type="number"
+                    name="month"
+                    id="month"
+                    placeholder="MM"
+                  />
+                  <input
+                    className="booking-input booking-date-input"
+                    type="number"
+                    name="day"
+                    id="day"
+                    placeholder="DD"
+                  />
+                  <input
+                    className="booking-input booking-date-input"
+                    type="number"
+                    name="year"
+                    id="year"
+                    placeholder="YYYY"
+                  />
+                </div>
 
-        <button type="submit">Make Reservation</button>
-      </form>
+                <span className="booking-input-error">
+                  This field is incomplete
+                </span>
+              </div>
+            </div>
+
+            <div className="booking-form-date">
+              <label className="booking-label">Pick a time</label>
+
+              <div className="booking-date-inputs">
+                <div>
+                  <input
+                    className="booking-input booking-time-input"
+                    type="number"
+                    name="hour"
+                    id="hour"
+                    placeholder="09"
+                  />
+                  <input
+                    className="booking-input booking-time-input"
+                    type="number"
+                    name="minute"
+                    id="minute"
+                    placeholder="00"
+                  />
+                  <div className="custom-select">
+                    <select
+                      className="booking-select"
+                      name="meridiem"
+                      id="meridiem"
+                    >
+                      <option value="am">AM</option>
+                      <option value="pm">PM</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <span className="booking-input-error">
+                This field is incomplete
+              </span>
+            </div>
+
+            <div className="booking-form-group">
+              <input
+                className="booking-input booking-people-input"
+                type="number"
+                name="people"
+                id="people"
+                value={4}
+              />
+            </div>
+
+            <Button text="Make reservation" theme="light" />
+          </form>
+        </div>
+      </section>
 
       <Footer />
     </>

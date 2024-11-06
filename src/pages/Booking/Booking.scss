@@ -2,7 +2,7 @@
 @use '../../styles/variables' as *;
 
 .booking-header {
-  background-image: url('../../../public/images/booking/hero-bg-mobile@2x.jpg');
+  background-image: url('/images/booking/hero-bg-mobile@2x.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -36,5 +36,90 @@
     font-weight: 400;
     text-wrap: stable;
     margin-bottom: 20px;
+  }
+}
+
+.booking-section {
+  @include padding-container;
+
+  &-container {
+    position: relative;
+    top: -134px;
+    background-color: $white;
+    padding: 32px;
+    box-shadow: 0 75px 100px -50px rgba(56, 66, 84, 0.5);
+    .booking-form {
+      display: grid;
+      gap: 34px;
+
+      &-group {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .booking-input {
+          width: 100%;
+          border: 0;
+          border-bottom: 1px solid #8e8e8e;
+          padding: 0 16px 14px;
+          color: $cod-gray;
+          font-size: 2rem;
+          line-height: 28px;
+          font-weight: 400;
+          outline: none;
+
+          &::placeholder {
+            color: $cod-gray;
+            opacity: 0.5;
+          }
+
+          &-error {
+            color: $error-red;
+            font-size: 1rem;
+            letter-spacing: -0.13px;
+            font-weight: 500;
+            position: absolute;
+            bottom: -16px;
+            left: 16px;
+            display: none;
+          }
+        }
+      }
+
+      &-date {
+        @extend .booking-form-group;
+
+        .booking-label {
+          font-size: 2rem;
+          color: $cod-gray;
+          line-height: 28px;
+          font-weight: 400;
+          margin-bottom: 8px;
+        }
+
+        .booking-date-inputs {
+          > div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 14px;
+
+            .custom-select {
+              width: 100%;
+
+              .booking-select {
+                @extend .booking-input;
+                appearance: none;
+                background-color: transparent;
+
+                background-image: url('../../../public/images/icons/icon-arrow.svg');
+                background-repeat: no-repeat;
+                background-position: 85% 20%;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
