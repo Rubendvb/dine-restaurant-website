@@ -141,7 +141,8 @@
                   cursor: pointer;
 
                   &:hover {
-                    background-color: red; // Ajuste de cor ao hover
+                    background-color: $neutral-dark-gray;
+                    color: $white;
                   }
                 }
               }
