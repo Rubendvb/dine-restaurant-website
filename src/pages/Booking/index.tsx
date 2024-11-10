@@ -1,10 +1,25 @@
+import { useState } from 'react'
 import { Button } from '../../components/Button'
 import { Footer } from '../../components/Footer'
 import { Logo } from '../../components/Logo'
+// import IconArrow from '/public/images/icons/icon-arrow.svg'
 
 import './Booking.scss'
 
 export function Booking() {
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [selected, setSelected] = useState<string>('AM')
+
+  const options = ['AM', 'PM']
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen)
+  }
+  const handleSelect = (option: string) => {
+    setSelected(option)
+    setIsOpen(false)
+  }
+
   return (
     <>
       <header className="booking-header">
@@ -103,15 +118,21 @@ export function Booking() {
                     id="minute"
                     placeholder="00"
                   />
-                  <div className="custom-select">
-                    <select
-                      className="booking-select"
-                      name="meridiem"
-                      id="meridiem"
-                    >
-                      <option value="am">AM</option>
-                      <option value="pm">PM</option>
-                    </select>
+                  <div
+                    className={`custom-select ${isOpen ? 'open' : ''}`}
+                    onClick={toggleDropdown}
+                  >
+                    <div className="selected-option">{selected}</div>
+
+                    {isOpen && (
+                      <ul className="options">
+                        {options.map((option) => (
+                          <li key={option} onClick={() => handleSelect(option)}>
+                            {option}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </div>
               </div>

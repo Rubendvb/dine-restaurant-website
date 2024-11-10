@@ -61,7 +61,8 @@
           width: 100%;
           border: 0;
           border-bottom: 1px solid #8e8e8e;
-          padding: 0 16px 14px;
+          height: 46px;
+          padding: 0 0 15px 16px;
           color: $cod-gray;
           font-size: 2rem;
           line-height: 28px;
@@ -105,16 +106,48 @@
             gap: 14px;
 
             .custom-select {
+              position: relative;
               width: 100%;
+              cursor: pointer;
 
-              .booking-select {
+              &:after {
+                content: url('/images/icons/icon-arrow.svg');
+                position: absolute;
+                right: 2%;
+                top: 10%;
+                pointer-events: none;
+              }
+
+              .selected-option {
                 @extend .booking-input;
-                appearance: none;
-                background-color: transparent;
+              }
 
-                background-image: url('../../../public/images/icons/icon-arrow.svg');
-                background-repeat: no-repeat;
-                background-position: 85% 20%;
+              .options {
+                display: none;
+                position: absolute;
+                top: 110%;
+                left: 0;
+                width: 100%;
+                background-color: $white;
+                box-shadow: 0 15px 25px 0 rgba(56, 66, 85, 0.24);
+                z-index: 10;
+                max-height: 150px;
+                overflow-y: auto;
+
+                li {
+                  padding: 10px 16px;
+                  font-size: 1.6rem;
+                  color: $cod-gray;
+                  cursor: pointer;
+
+                  &:hover {
+                    background-color: red; // Ajuste de cor ao hover
+                  }
+                }
+              }
+
+              &.open .options {
+                display: block;
               }
             }
           }
