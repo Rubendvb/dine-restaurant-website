@@ -2,22 +2,37 @@ import { useState } from 'react'
 import { Button } from '../../components/Button'
 import { Footer } from '../../components/Footer'
 import { Logo } from '../../components/Logo'
-// import IconArrow from '/public/images/icons/icon-arrow.svg'
+import IconPlus from '/public/images/icons/icon-plus.svg'
+import IconMinus from '/public/images/icons/icon-minus.svg'
 
 import './Booking.scss'
 
 export function Booking() {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [selected, setSelected] = useState<string>('AM')
+  const [countPeople, setCountPeople] = useState<number>(0)
 
   const options = ['AM', 'PM']
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen)
   }
+
   const handleSelect = (option: string) => {
     setSelected(option)
     setIsOpen(false)
+  }
+
+  const handleCountPeople = (action: string) => {
+    if (countPeople === 0 && action === 'minus') {
+      return
+    }
+
+    if (action === 'plus') {
+      setCountPeople(countPeople + 1)
+    } else {
+      setCountPeople(countPeople - 1)
+    }
   }
 
   return (
@@ -142,14 +157,22 @@ export function Booking() {
               </span>
             </div>
 
-            <div className="booking-form-group">
-              <input
-                className="booking-input booking-people-input"
-                type="number"
-                name="people"
-                id="people"
-                value={4}
-              />
+            <div className="booking-form-group people-group">
+              <span
+                className="people-group-button-minus"
+                onClick={() => handleCountPeople('minus')}
+              >
+                <img src={IconMinus} alt="" />
+              </span>
+              <p className="booking-input">
+                {countPeople} {countPeople === 1 ? 'person' : 'people'}
+              </p>
+              <span
+                className="people-group-button-plus"
+                onClick={() => handleCountPeople('plus')}
+              >
+                <img src={IconPlus} alt="" />
+              </span>
             </div>
 
             <Button text="Make reservation" theme="light" />
