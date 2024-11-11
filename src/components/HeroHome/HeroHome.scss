@@ -23,6 +23,11 @@
     padding-top: 12px;
     height: -webkit-fill-available;
 
+    @media screen and (min-width: 768px) {
+      top: 38%;
+      padding-top: 0;
+    }
+
     svg {
       margin-bottom: 36px;
     }
@@ -36,6 +41,14 @@
       text-wrap: wrap;
       line-height: 40px;
       width: 200px;
+
+      @media screen and (min-width: 768px) {
+        font-size: 4.8rem;
+        width: 390px;
+        line-height: 64px;
+        letter-spacing: -0.6px;
+        margin-bottom: 20px;
+      }
     }
 
     &__p {
@@ -44,7 +57,12 @@
       line-height: 26px;
       text-align: center;
       font-weight: 400;
-      margin-bottom: 53px;
+      margin-bottom: 52px;
+
+      @media screen and (min-width: 768px) {
+        font-size: 2rem;
+        width: 573px;
+      }
     }
   }
 }

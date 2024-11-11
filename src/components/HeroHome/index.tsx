@@ -6,11 +6,20 @@ import './HeroHome.scss'
 export function HeroHome() {
   return (
     <header className="hero">
-      <img
-        className="hero__img"
-        src="/images/homepage/hero-bg-mobile@2x.jpg"
-        alt="hero-bg-mobile"
-      />
+      <picture className="hero__img">
+        <source
+          media="(min-width: 1440px)"
+          srcSet="../../../public/images/homepage/hero-bg-desktop@2x.jpg"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcSet="../../../public/images/homepage/hero-bg-tablet@2x.jpg"
+        />
+        <img
+          src="/images/homepage/hero-bg-mobile@2x.jpg"
+          alt="hero-bg-mobile"
+        />
+      </picture>
 
       <div className="hero__content">
         <Logo />
