@@ -33,7 +33,7 @@ export function FamilyExperience() {
       </article>
 
       <article className="family-experience-place">
-        <picture className="family-experience-image">
+        <picture className="family-experience-image image-lines">
           <source
             media="(min-width: 1440px)"
             srcSet="/images/homepage/locally-sourced-desktop@2x.jpg"
