@@ -7,13 +7,15 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 600px;
-
-  @include padding-container;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 56px;
+
+  @include padding-container;
+  & {
+    padding-top: 56px;
+  }
 
   svg {
     margin-bottom: 44px;

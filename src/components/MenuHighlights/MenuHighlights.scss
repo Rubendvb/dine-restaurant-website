@@ -2,11 +2,12 @@
 @use '../../styles/mixins' as *;
 
 .menu-highlights {
-  @include padding-container;
-
   background-color: $cod-gray;
-  padding-top: 72px;
-  padding-bottom: 102px;
+  @include padding-container;
+  & {
+    padding-top: 72px;
+    padding-bottom: 102px;
+  }
 
   &-header {
     display: flex;

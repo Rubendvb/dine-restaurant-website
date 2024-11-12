@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { Button } from '../../components/Button'
 import { Footer } from '../../components/Footer'
 import { Logo } from '../../components/Logo'
-import IconPlus from '/public/images/icons/icon-plus.svg'
-import IconMinus from '/public/images/icons/icon-minus.svg'
+import IconPlus from '/images/icons/icon-plus.svg'
+import IconMinus from '/images/icons/icon-minus.svg'
 
 import './Booking.scss'
 

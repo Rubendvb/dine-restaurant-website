@@ -2,8 +2,6 @@
 @use '../../styles/variables' as *;
 
 .reservation {
-  @include padding-container;
-
   background-image: url('/images/homepage/ready-bg-mobile@2x.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,6 +12,8 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+
+  @include padding-container;
 
   h2 {
     color: $white;

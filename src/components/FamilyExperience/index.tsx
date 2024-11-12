@@ -6,11 +6,20 @@ export function FamilyExperience() {
   return (
     <section className="family-experience">
       <article className="family-experience-place">
-        <img
-          className="family-experience-image"
-          src="/images/homepage/enjoyable-place-mobile@2x.jpg"
-          alt="enjoyable place"
-        />
+        <picture className="family-experience-image">
+          <source
+            media="(min-width: 1440px)"
+            srcSet="/images/homepage/enjoyable-place-desktop@2x.jpg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcSet="/images/homepage/enjoyable-place-tablet@2x.jpg"
+          />
+          <img
+            src="/images/homepage/enjoyable-place-mobile@2x.jpg"
+            alt="enjoyable place"
+          />
+        </picture>
 
         <img className="family-experience-divide" src={Divide} alt="" />
 
@@ -24,11 +33,20 @@ export function FamilyExperience() {
       </article>
 
       <article className="family-experience-place">
-        <img
-          className="family-experience-image"
-          src="/images/homepage/locally-sourced-mobile@2x.jpg"
-          alt="locally sourced"
-        />
+        <picture className="family-experience-image">
+          <source
+            media="(min-width: 1440px)"
+            srcSet="/images/homepage/locally-sourced-desktop@2x.jpg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcSet="/images/homepage/locally-sourced-tablet@2x.jpg"
+          />
+          <img
+            src="/images/homepage/locally-sourced-mobile@2x.jpg"
+            alt="locally sourced"
+          />
+        </picture>
 
         <img className="family-experience-divide" src={Divide} alt="" />
 
