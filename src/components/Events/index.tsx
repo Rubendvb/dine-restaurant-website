@@ -1,40 +1,88 @@
+import { useState } from 'react'
+import classNames from 'classnames'
 import { Button } from '../Button'
 import './Events.scss'
 
 export function Events() {
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  const items = [
+    {
+      title: 'Family Gathering',
+      description:
+        'We love catering for entire families. So please bring everyone along for a special meal with your loved ones. We’ll provide a memorable experience for all.',
+    },
+    {
+      title: 'Special Events',
+      description:
+        'Whether it’s a romantic dinner or special date you’re celebrating with others, we’ll look after you. We’ll be sure to mark your special date with an unforgettable meal.',
+    },
+    {
+      title: 'Social Events',
+      description:
+        'Are you looking to have a larger social event? No problem! We’re more than happy to cater for big parties. We’ll work with you to make your event a hit with everyone.',
+    },
+  ]
+
+  function handleList(index: number) {
+    setActiveIndex(index)
+  }
   return (
     <section className="events">
-      <img
-        className="events-image"
-        src="/images/homepage/family-gathering-mobile@2x.jpg"
-        alt="Family gathering"
-      />
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcSet="/images/homepage/family-gathering-desktop@2x.jpg"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcSet="/images/homepage/family-gathering-tablet@2x.jpg"
+        />
+        <img
+          className="events-image"
+          src="/images/homepage/family-gathering-mobile@2x.jpg"
+          alt="Family gathering"
+        />
+      </picture>
 
       <ul className="events-list">
-        <li className="events-list-item active">Family Gathering</li>
-        <li className="events-list-item">Special Events</li>
-        <li className="events-list-item">Social Events</li>
+        {items.map((item, index) => (
+          <li
+            key={index}
+            className={classNames('events-list-item', {
+              active: index === activeIndex,
+            })}
+            onClick={() => handleList(index)}
+          >
+            {item.title}
+          </li>
+        ))}
       </ul>
 
       <div className="events-content">
-        <h2 className="events-title">Family Gathering</h2>
-        <p className="events-description">
-          We love catering for entire families. So please bring everyone along
-          for a special meal with your loved ones. We’ll provide a memorable
-          experience for all.
-        </p>
-        <h2 className="events-title">Special Events</h2>
-        <p className="events-description">
-          Whether it’s a romantic dinner or special date you’re celebrating with
-          others, we’ll look after you. We’ll be sure to mark your special date
-          with an unforgettable meal.
-        </p>
-        <h2 className="events-title">Social Events</h2>
-        <p className="events-description">
-          Are you looking to have a larger social event? No problem! We’re more
-          than happy to cater for big parties. We’ll work with you to make your
-          event a hit with everyone.
-        </p>
+        {items.map((item, index) => (
+          <div
+            key={index}
+            className={classNames('events-content-item', {
+              active: index === activeIndex,
+            })}
+          >
+            <h2
+              className={classNames('events-title', {
+                active: index === activeIndex,
+              })}
+            >
+              {item.title}
+            </h2>
+            <p
+              className={classNames('events-description', {
+                active: index === activeIndex,
+              })}
+            >
+              {item.description}
+            </p>
+          </div>
+        ))}
       </div>
 
       <Button theme="light" text="Book a table" />
