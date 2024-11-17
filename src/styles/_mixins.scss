@@ -8,12 +8,16 @@
   color: v.$mirage;
 }
 
-@mixin heading-large($font-size: 4.8rem, $line-height: 48px) {
+@mixin heading-large(
+  $font-size: 4.8rem,
+  $line-height: 48px,
+  $color: $ebony-clay
+) {
   font-size: $font-size;
   line-height: $line-height;
   font-weight: 700;
   letter-spacing: -0.5px;
-  color: $ebony-clay;
+  color: $color;
   text-align: center;
 }
 
@@ -33,12 +37,12 @@
   color: $neutral-dark-gray;
 }
 
-@mixin text-medium($font-size: 2rem, $line-height: 30px) {
+@mixin text-medium($font-size: 2rem, $line-height: 30px, $color: $ebony-clay) {
   font-size: $font-size;
   line-height: $line-height;
+  color: $color;
   font-weight: 400; // Regular
   letter-spacing: 0px;
-  color: $ebony-clay;
   text-align: center;
 }
 

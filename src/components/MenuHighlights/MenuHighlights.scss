@@ -9,33 +9,49 @@
     padding-bottom: 102px;
   }
 
+  @media screen and (min-width: 768px) {
+    padding: 96px 98px;
+  }
+
   &-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 86px;
 
+    @media screen and (min-width: 768px) {
+      margin-bottom: 54px;
+    }
+
     img {
       margin-bottom: 36px;
+
+      @media screen and (min-width: 768px) {
+        margin-bottom: 40px;
+      }
     }
   }
 
   &-title {
-    @include heading-large;
+    @include heading-large(3.2rem, 40px, $white);
 
-    color: $white;
-    font-size: 3.2rem;
-    line-height: 40px;
     text-wrap: pretty;
     margin-bottom: 12px;
+
+    @media screen and (min-width: 768px) {
+      @include heading-large(4.8rem, 48px, $white);
+
+      margin-bottom: 28px;
+    }
   }
 
   &-text {
-    @include text-medium;
+    @include text-medium(1.6rem, 26px, $white);
 
-    color: $white;
-    font-size: 1.6rem;
-    line-height: 26px;
+    @media screen and (min-width: 768px) {
+      @include text-medium(2rem, 30px, $white);
+      width: 445px;
+    }
   }
 
   &-content {
@@ -43,9 +59,20 @@
     flex-direction: column;
     gap: 24px;
 
+    @media screen and (min-width: 768px) {
+      align-items: self-start;
+    }
+
     .menu-item {
       border-bottom: 1px solid rgba(255, 255, 255, 0.15);
       padding-bottom: 54px;
+      width: 100%;
+
+      @media screen and (min-width: 768px) {
+        display: flex;
+        gap: 62px;
+        padding-bottom: 30px;
+      }
 
       &:nth-child(2) {
         padding-bottom: 28px;
@@ -56,8 +83,36 @@
         padding-bottom: 0;
       }
 
-      img {
-        margin-bottom: 36px;
+      &-image {
+        position: relative;
+        max-width: 128px;
+
+        @media screen and (min-width: 768px) {
+          margin-bottom: 0;
+
+          &::after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 32px;
+            top: 10%;
+            right: -25%;
+            background-color: $beaver;
+          }
+        }
+
+        img {
+          margin-bottom: 36px;
+        }
+      }
+
+      &-info {
+        @media screen and (min-width: 768px) {
+          display: flex;
+          flex-direction: column;
+          align-items: self-start;
+          gap: 6px;
+        }
       }
 
       &-title {
@@ -72,8 +127,15 @@
 
       &-description {
         @include text-small;
-
         color: white;
+
+        @media screen and (min-width: 768px) {
+          text-align: start;
+
+          br {
+            display: none;
+          }
+        }
       }
     }
   }
