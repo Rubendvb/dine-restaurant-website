@@ -31,7 +31,7 @@ export function Events() {
     <section className="events">
       <picture>
         <source
-          media="(min-width: 1440px)"
+          media="(min-width: 1024px)"
           srcSet="/images/homepage/family-gathering-desktop@2x.jpg"
         />
         <source

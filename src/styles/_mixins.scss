@@ -1,11 +1,17 @@
 @use './variables' as *;
 
-@mixin heading-xl {
-  font-size: 8rem;
-  line-height: 80px;
+@mixin heading-xl(
+  $font-size: 8rem,
+  $line-height: 80px,
+  $color: $mirage,
+  $letter-spacing: -1px
+) {
+  font-size: $font-size;
+  line-height: $line-height;
   font-weight: 300;
   letter-spacing: -1px;
-  color: v.$mirage;
+  color: $color;
+  text-align: center;
 }
 
 @mixin heading-large(

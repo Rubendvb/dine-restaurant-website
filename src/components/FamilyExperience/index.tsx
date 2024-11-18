@@ -8,7 +8,7 @@ export function FamilyExperience() {
       <article className="family-experience-place">
         <picture className="family-experience-image">
           <source
-            media="(min-width: 1440px)"
+            media="(min-width: 1024px)"
             srcSet="/images/homepage/enjoyable-place-desktop@2x.jpg"
           />
           <source
@@ -35,7 +35,7 @@ export function FamilyExperience() {
       <article className="family-experience-place">
         <picture className="family-experience-image image-lines">
           <source
-            media="(min-width: 1440px)"
+            media="(min-width: 1024px)"
             srcSet="/images/homepage/locally-sourced-desktop@2x.jpg"
           />
           <source
