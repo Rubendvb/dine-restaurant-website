@@ -12,15 +12,23 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-
   @include padding-container;
 
-  h2 {
-    color: $white;
-    font-size: 3.2rem;
-    text-align: center;
-    font-weight: 700;
-    line-height: 40px;
+  @media screen and (min-width: 768px) {
+    background-image: url('/images/homepage/ready-bg-tablet@2x.jpg');
+    background-position: inherit;
+    gap: 24px;
+    height: 272px;
+  }
+
+  &-title {
+    @include heading-large(3.2rem, 40px, $white);
     text-wrap: pretty;
+
+    @media screen and (min-width: 768px) {
+      @include heading-large();
+      color: $white;
+      text-wrap: nowrap;
+    }
   }
 }
