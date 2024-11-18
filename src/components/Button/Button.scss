@@ -1,0 +1,11 @@
+@use '../../styles/mixins' as *;
+
+.btn {
+  @include button-base;
+
+  @each $mode in (light, dark) {
+    &.btn-#{$mode} {
+      @include btn-theme($mode);
+    }
+  }
+}
