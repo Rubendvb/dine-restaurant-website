@@ -8,7 +8,7 @@ export function HeroHome() {
     <header className="hero">
       <picture className="hero__img">
         <source
-          media="(min-width: 1440px)"
+          media="(min-width: 1024px)"
           srcSet="/images/homepage/hero-bg-desktop@2x.jpg"
         />
         <source

@@ -38,10 +38,6 @@ export function MenuHighlights() {
         <div className="menu-item">
           <picture className="menu-item-image">
             <source
-              media="(min-width: 1440px)"
-              srcSet="/images/homepage/beef-desktop-tablet@2x.jpg"
-            />
-            <source
               media="(min-width: 768px)"
               srcSet="/images/homepage/beef-desktop-tablet@2x.jpg"
             />
@@ -59,10 +55,6 @@ export function MenuHighlights() {
 
         <div className="menu-item">
           <picture className="menu-item-image">
-            <source
-              media="(min-width: 1440px)"
-              srcSet="/images/homepage/chocolate-desktop-tablet@2x.jpg"
-            />
             <source
               media="(min-width: 768px)"
               srcSet="/images/homepage/chocolate-desktop-tablet@2x.jpg"
