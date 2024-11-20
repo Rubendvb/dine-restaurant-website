@@ -23,6 +23,11 @@
       top: 14.3%;
       translate: -50%;
       width: 100%;
+
+      @media screen and (min-width: 1024px) {
+        top: 20%;
+        translate: 0;
+      }
     }
 
     &::after {
@@ -30,7 +35,17 @@
       top: 86%;
       translate: 50%;
       width: 66.5%;
+
+      @media screen and (min-width: 1024px) {
+        top: 74%;
+        translate: 56.5%;
+      }
     }
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: -60px;
+    padding: 0 165px;
   }
 
   &-place {
@@ -46,14 +61,20 @@
         margin-bottom: 0;
       }
     }
+
+    @media screen and (min-width: 1024px) {
+      flex-direction: row;
+      gap: 125px;
+      margin-bottom: 122px;
+    }
   }
 
   &-image {
     box-shadow: 0 75px 100px -50px rgba(56, 66, 84, 0.5);
     position: relative;
 
-    @media screen and (min-width: 768px) {
-      &.image-lines::after {
+    &.image-lines::after {
+      @media screen and (min-width: 768px) {
         content: '';
         position: absolute;
         background-image: url('/images/patterns/pattern-lines.svg');
@@ -65,14 +86,38 @@
         right: 0;
         transform: translate(35%, -80%);
       }
+
+      @media screen and (min-width: 1024px) {
+        bottom: 42%;
+        right: -11%;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      max-width: 540px;
+      z-index: 1;
+    }
+  }
+
+  &-content {
+    &.content-two {
+      @media screen and (min-width: 1024px) {
+        order: -1;
+      }
     }
   }
 
   &-divide {
     padding: 48px 0 36px;
+    justify-self: center;
 
     @media screen and (min-width: 768px) {
       padding: 56px 0 40px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      justify-self: flex-start;
+      padding: 0 0 55px;
     }
   }
 
@@ -84,6 +129,10 @@
       @include heading-large();
       margin-bottom: 28px;
     }
+
+    @media screen and (min-width: 1024px) {
+      text-align: start;
+    }
   }
 
   &-text {
@@ -92,6 +141,14 @@
     @media screen and (min-width: 768px) {
       @include text-medium;
       width: 457px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      text-align: start;
+
+      .content-two & {
+        width: 445px;
+      }
     }
   }
 }
