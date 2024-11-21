@@ -13,6 +13,15 @@
     padding: 96px 98px;
   }
 
+  @media screen and (min-width: 1024px) {
+    position: relative;
+    transform: translateY(-19%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 200px 165px 120px;
+    gap: 125px;
+  }
+
   &-header {
     display: flex;
     flex-direction: column;
@@ -23,11 +32,20 @@
       margin-bottom: 54px;
     }
 
+    @media screen and (min-width: 1024px) {
+      margin: 0;
+    }
+
     img {
       margin-bottom: 36px;
 
       @media screen and (min-width: 768px) {
         margin-bottom: 40px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        margin-right: auto;
+        margin-bottom: 55px;
       }
     }
   }
@@ -40,8 +58,11 @@
 
     @media screen and (min-width: 768px) {
       @include heading-large(4.8rem, 48px, $white);
-
       margin-bottom: 28px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      text-align: start;
     }
   }
 
@@ -49,8 +70,14 @@
     @include text-medium(1.6rem, 26px, $white);
 
     @media screen and (min-width: 768px) {
-      @include text-medium(2rem, 30px, $white);
-      width: 445px;
+      @include text-medium($color: $white);
+      max-width: 445px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      text-align: start;
+      align-self: flex-start;
+      width: 100%;
     }
   }
 
@@ -63,6 +90,10 @@
       align-items: self-start;
     }
 
+    @media screen and (min-width: 1024px) {
+      margin-top: 56px;
+    }
+
     .menu-item {
       border-bottom: 1px solid rgba(255, 255, 255, 0.15);
       padding-bottom: 54px;
@@ -72,6 +103,10 @@
         display: flex;
         gap: 62px;
         padding-bottom: 30px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        padding-bottom: 24px;
       }
 
       &:nth-child(2) {
@@ -102,7 +137,11 @@
         }
 
         img {
-          margin-bottom: 36px;
+          margin: 0 auto 36px;
+
+          @media screen and (min-width: 1024px) {
+            margin: 0;
+          }
         }
       }
 
@@ -116,18 +155,21 @@
       }
 
       &-title {
-        @include text-medium;
-
-        font-weight: 700;
-        color: $white;
-        line-height: 24px;
-        letter-spacing: -0.25px;
+        @include text-medium(
+          $font-weight: 700,
+          $color: $white,
+          $line-height: 24px,
+          $letter-spacing: -0.25px
+        );
         margin-bottom: 6px;
+
+        @media screen and (min-width: 1024px) {
+          text-align: start;
+        }
       }
 
       &-description {
-        @include text-small;
-        color: white;
+        @include text-small($white);
 
         @media screen and (min-width: 768px) {
           text-align: start;

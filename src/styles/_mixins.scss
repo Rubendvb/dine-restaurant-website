@@ -43,12 +43,18 @@
   color: $neutral-dark-gray;
 }
 
-@mixin text-medium($font-size: 2rem, $line-height: 30px, $color: $ebony-clay) {
+@mixin text-medium(
+  $font-size: 2rem,
+  $font-weight: 400,
+  $line-height: 30px,
+  $color: $ebony-clay,
+  $letter-spacing: 0px
+) {
   font-size: $font-size;
   line-height: $line-height;
   color: $color;
-  font-weight: 400; // Regular
-  letter-spacing: 0px;
+  font-weight: $font-weight; // Regular
+  letter-spacing: $letter-spacing;
   text-align: center;
 }
 
