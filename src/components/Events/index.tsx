@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import classNames from 'classnames'
+
 import { Button } from '../Button'
+
 import './Events.scss'
 
 export function Events() {

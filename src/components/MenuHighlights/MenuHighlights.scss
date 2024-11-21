@@ -67,7 +67,11 @@
   }
 
   &-text {
-    @include text-medium(1.6rem, 26px, $white);
+    @include text-medium(
+      $font-size: 1.6rem,
+      $line-height: 26px,
+      $color: $white
+    );
 
     @media screen and (min-width: 768px) {
       @include text-medium($color: $white);
