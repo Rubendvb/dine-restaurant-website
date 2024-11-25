@@ -20,7 +20,6 @@ export function FamilyExperience() {
             alt="enjoyable place"
           />
         </picture>
-
         <div className="family-experience-content">
           <img className="family-experience-divide" src={Divide} alt="" />
           <h2 className="family-experience-title">
@@ -32,7 +31,6 @@ export function FamilyExperience() {
           </p>
         </div>
       </article>
-
       <article className="family-experience-place">
         <picture className="family-experience-image image-lines">
           <source
@@ -48,7 +46,6 @@ export function FamilyExperience() {
             alt="locally sourced"
           />
         </picture>
-
         <div className="family-experience-content content-two">
           <img className="family-experience-divide" src={Divide} alt="" />
           <h2 className="family-experience-title">
