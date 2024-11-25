@@ -30,7 +30,19 @@
       height: 100%;
       max-height: 320px;
       z-index: -1;
+
+      @media screen and (min-width: 1024px) {
+        transform: translate(-26%, 0%);
+      }
     }
+  }
+
+  @media screen and (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 125px;
+    padding: 165px 160px;
+    transform: translateY(-9%);
   }
 
   picture {
@@ -56,11 +68,26 @@
   &-image {
     box-shadow: 0 75px 100px -50px rgba(56, 66, 84, 0.5);
     margin-bottom: 50px;
+    object-fit: scale-down;
 
     @media screen and (min-width: 768px) {
       margin-bottom: 58px;
       width: 573px;
       position: relative;
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 0;
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 1024px) {
+      align-items: start;
     }
   }
 
@@ -78,15 +105,28 @@
       margin-bottom: 48px;
     }
 
+    @media screen and (min-width: 1024px) {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+
     &-item {
       @include heading-small;
       opacity: 0.5;
       text-transform: uppercase;
       cursor: pointer;
 
+      &:hover {
+        opacity: 1;
+      }
+
       @media screen and (min-width: 768px) {
         width: 223px;
         text-align: center;
+      }
+
+      @media screen and (min-width: 1024px) {
+        text-align: start;
       }
 
       &.active {
@@ -106,6 +146,13 @@
           @media screen and (min-width: 768px) {
             bottom: -7px;
           }
+
+          @media screen and (min-width: 1024px) {
+            width: 95px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-250%, -50%);
+          }
         }
       }
     }
@@ -118,6 +165,13 @@
 
     @media screen and (min-width: 768px) {
       margin-bottom: 60px;
+    }
+
+    &-wrapper {
+      @media screen and (min-width: 1024px) {
+        order: -1;
+        margin-bottom: 80px;
+      }
     }
   }
 
@@ -147,6 +201,11 @@
     @media screen and (min-width: 768px) {
       @include text-medium();
       width: 457px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      text-align: start;
+      width: 445px;
     }
   }
 }

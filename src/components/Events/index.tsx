@@ -31,63 +31,68 @@ export function Events() {
   }
   return (
     <section className="events">
-      <picture>
-        <source
-          media="(min-width: 1024px)"
-          srcSet="/images/homepage/family-gathering-desktop@2x.jpg"
-        />
-        <source
-          media="(min-width: 768px)"
-          srcSet="/images/homepage/family-gathering-tablet@2x.jpg"
-        />
-        <img
-          className="events-image"
-          src="/images/homepage/family-gathering-mobile@2x.jpg"
-          alt="Family gathering"
-        />
-      </picture>
-
-      <ul className="events-list">
-        {items.map((item, index) => (
-          <li
-            key={index}
-            className={classNames('events-list-item', {
-              active: index === activeIndex,
-            })}
-            onClick={() => handleList(index)}
-          >
-            {item.title}
-          </li>
-        ))}
-      </ul>
-
-      <div className="events-content">
-        {items.map((item, index) => (
-          <div
-            key={index}
-            className={classNames('events-content-item', {
-              active: index === activeIndex,
-            })}
-          >
-            <h2
-              className={classNames('events-title', {
-                active: index === activeIndex,
-              })}
-            >
-              {item.title}
-            </h2>
-            <p
-              className={classNames('events-description', {
-                active: index === activeIndex,
-              })}
-            >
-              {item.description}
-            </p>
-          </div>
-        ))}
+      <div>
+        <picture>
+          <source
+            media="(min-width: 1024px)"
+            srcSet="/images/homepage/family-gathering-desktop@2x.jpg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcSet="/images/homepage/family-gathering-tablet@2x.jpg"
+          />
+          <img
+            className="events-image"
+            src="/images/homepage/family-gathering-mobile@2x.jpg"
+            alt="Family gathering"
+          />
+        </picture>
       </div>
 
-      <Button theme="light" text="Book a table" />
+      <div>
+        <ul className="events-list">
+          {items.map((item, index) => (
+            <li
+              key={index}
+              className={classNames('events-list-item', {
+                active: index === activeIndex,
+              })}
+              onClick={() => handleList(index)}
+            >
+              {item.title}
+            </li>
+          ))}
+        </ul>
+
+        <div className="events-content-wrapper">
+          <div className="events-content">
+            {items.map((item, index) => (
+              <div
+                key={index}
+                className={classNames('events-content-item', {
+                  active: index === activeIndex,
+                })}
+              >
+                <h2
+                  className={classNames('events-title', {
+                    active: index === activeIndex,
+                  })}
+                >
+                  {item.title}
+                </h2>
+                <p
+                  className={classNames('events-description', {
+                    active: index === activeIndex,
+                  })}
+                >
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+          <Button theme="light" text="Book a table" />
+        </div>
+      </div>
     </section>
   )
 }
