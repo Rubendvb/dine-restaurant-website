@@ -21,6 +21,15 @@
     height: 272px;
   }
 
+  @media screen and (min-width: 1024px) {
+    background-image: url('../../../public/images/homepage/ready-bg-desktop@2x.jpg');
+
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 166px;
+    height: 240px;
+  }
+
   &-title {
     @include heading-large(3.2rem, 40px, $white);
     text-wrap: pretty;
