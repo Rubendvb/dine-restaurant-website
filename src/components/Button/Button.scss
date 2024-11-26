@@ -8,4 +8,9 @@
       @include btn-theme($mode);
     }
   }
+
+  // Adiciona o estilo apenas se .btn estiver dentro de .booking-form
+  .booking-form & {
+    width: 100%;
+  }
 }

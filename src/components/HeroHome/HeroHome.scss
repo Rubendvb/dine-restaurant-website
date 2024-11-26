@@ -5,6 +5,8 @@
   position: relative;
 
   @media screen and (min-width: 1024px) {
+    height: 820px;
+
     &::after {
       content: '';
       position: absolute;
@@ -19,6 +21,11 @@
   &__img {
     width: 100%;
     filter: contrast(0.8);
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__content {
@@ -79,11 +86,15 @@
     }
 
     &__p {
-      @include text-medium(1.6rem, 26px, $white);
+      @include text-medium(
+        $font-size: 1.6rem,
+        $line-height: 26px,
+        $color: $white
+      );
       margin-bottom: 52px;
 
       @media screen and (min-width: 768px) {
-        @include text-medium(2rem, null, null);
+        @include text-medium($font-size: 2rem, $color: $white);
         width: 573px;
       }
 

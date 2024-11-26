@@ -20,18 +20,17 @@ export function FamilyExperience() {
             alt="enjoyable place"
           />
         </picture>
-
-        <img className="family-experience-divide" src={Divide} alt="" />
-
-        <h2 className="family-experience-title">
-          Enjoyable place for all the family
-        </h2>
-        <p className="family-experience-text">
-          Our relaxed surroundings make dining with us a great experience for
-          everyone. We can even arrange a tour of the farm before your meal.
-        </p>
+        <div className="family-experience-content">
+          <img className="family-experience-divide" src={Divide} alt="" />
+          <h2 className="family-experience-title">
+            Enjoyable place for all the family
+          </h2>
+          <p className="family-experience-text">
+            Our relaxed surroundings make dining with us a great experience for
+            everyone. We can even arrange a tour of the farm before your meal.
+          </p>
+        </div>
       </article>
-
       <article className="family-experience-place">
         <picture className="family-experience-image image-lines">
           <source
@@ -47,17 +46,17 @@ export function FamilyExperience() {
             alt="locally sourced"
           />
         </picture>
-
-        <img className="family-experience-divide" src={Divide} alt="" />
-
-        <h2 className="family-experience-title">
-          The most locally sourced food
-        </h2>
-        <p className="family-experience-text">
-          All our ingredients come directly from our farm or local fishery. So
-          you can be sure that you’re eating the freshest, most sustainable
-          food.
-        </p>
+        <div className="family-experience-content content-two">
+          <img className="family-experience-divide" src={Divide} alt="" />
+          <h2 className="family-experience-title">
+            The most locally sourced food
+          </h2>
+          <p className="family-experience-text">
+            All our ingredients come directly from our farm or local fishery. So
+            you can be sure that you’re eating the freshest, most sustainable
+            food.
+          </p>
+        </div>
       </article>
     </section>
   )

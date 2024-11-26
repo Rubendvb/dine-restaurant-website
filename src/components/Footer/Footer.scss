@@ -21,6 +21,12 @@
     gap: 130px;
   }
 
+  @media screen and (min-width: 1024px) {
+    gap: 192px;
+    align-items: center;
+    padding: 80px 166px;
+  }
+
   &-content {
     display: flex;
     flex-direction: column;
@@ -31,6 +37,11 @@
       align-items: flex-start;
     }
 
+    @media screen and (min-width: 1024px) {
+      flex-direction: row;
+      gap: 124px;
+    }
+
     &-info {
       @media screen and (min-width: 768px) {
         display: flex;
@@ -38,13 +49,14 @@
         align-items: flex-start;
       }
       span {
-        @include text-medium;
+        @include text-medium(
+          $font-size: 1.4rem,
+          $color: $white,
+          $line-height: 28px,
+          $letter-spacing: 2px
+        );
 
         display: block;
-        color: $white;
-        line-height: 28px;
-        letter-spacing: 2px;
-        font-size: 1.4rem;
         text-transform: uppercase;
       }
     }
