@@ -18,12 +18,12 @@
   }
 
   @media screen and (min-width: 768px) {
-    background-image: url('../../../public/images/booking/hero-bg-tablet@2x.jpg');
+    background-image: url('/images/booking/hero-bg-tablet@2x.jpg');
     padding-top: 166px;
   }
 
   @media screen and (min-width: 1440px) {
-    background-image: url('../../../public/images/booking/hero-bg-desktop@2x.jpg');
+    background-image: url('/images/booking/hero-bg-desktop@2x.jpg');
     padding: 258px 165px 0;
   }
 
@@ -120,7 +120,7 @@
     &::after {
       content: '';
       position: absolute;
-      background-image: url('../../../public/images/patterns/pattern-curve-bottom-right.svg');
+      background-image: url('/images/patterns/pattern-curve-bottom-right.svg');
       background-repeat: no-repeat;
       top: 52%;
       z-index: -1;
@@ -132,7 +132,7 @@
     &::before {
       content: '';
       position: absolute;
-      background-image: url('../../../public/images/patterns/pattern-lines.svg');
+      background-image: url('/images/patterns/pattern-lines.svg');
       background-repeat: no-repeat;
       z-index: -1;
       width: 160px;
