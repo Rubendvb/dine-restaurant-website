@@ -3,20 +3,33 @@
 
 .hero {
   position: relative;
-  max-height: 748px;
+  height: 748px;
   overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    height: 992px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    height: 820px;
+  }
 
   &__picture {
     img {
       width: 100%;
       filter: contrast(0.8);
+
+      @media screen and (min-width: 1024px) {
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 
   &__content {
     position: absolute;
     background-color: $cod-gray;
-    top: 30%;
+    top: 60vw;
     left: 0;
     width: 100%;
     height: 100%;
@@ -28,18 +41,69 @@
       padding-top: 12px;
     }
 
-    &__logo {
-      margin-bottom: 3.6rem;
+    @media screen and (min-width: 768px) {
+      top: 48vw;
+      padding-top: 0;
     }
 
-    &__title {
+    @media screen and (min-width: 1024px) {
+      top: 0;
+      width: 40%;
+      padding: 0;
+      max-width: 1440px;
+    }
+
+    .hero__logo {
+      margin-bottom: 3.6rem;
+
+      @media screen and (min-width: 768px) {
+        margin-bottom: 3.8rem;
+      }
+
+      @media screen and (min-width: 1024px) {
+        position: absolute;
+        top: 8%;
+        left: 29%;
+      }
+    }
+
+    .hero__content__text {
+      place-items: center;
+
+      @media screen and (min-width: 1024px) {
+        position: absolute;
+        top: 32%;
+        left: 29%;
+        width: 507px;
+        place-items: start;
+      }
+    }
+
+    .hero__title {
       @include heading-xl($font-size: 3.2rem, $line-height: 40px);
       margin-bottom: 20px;
+
+      @media screen and (min-width: 768px) {
+        @include heading-xl($font-size: 4.8rem, $line-height: 64px);
+      }
+
+      @media screen and (min-width: 1024px) {
+        @include heading-xl($text-align: start);
+        margin-bottom: 10px;
+      }
     }
 
-    &__description {
+    .hero__description {
       @include paragraph($font-size: 1.6rem, $line-height: 26px);
       margin-bottom: 52px;
+
+      @media screen and (min-width: 768px) {
+        @include paragraph($font-size: 2rem, $line-height: 30px);
+      }
+
+      @media screen and (min-width: 1024px) {
+        text-align: start;
+      }
     }
   }
 }

@@ -19,20 +19,21 @@ export function HeroHome() {
       </picture>
 
       <div className="hero__content">
-        <div className="hero__content__logo">
+        <div className="hero__logo">
           <Logo />
         </div>
 
-        <h1 className="hero__content__title">
-          Exquisite dining <br /> since 1989
-        </h1>
+        <div className="hero__content__text">
+          <h1 className="hero__title">
+            Exquisite dining <br /> since 1989
+          </h1>
+          <p className="hero__description">
+            Experience our seasonal menu in beautiful country surroundings. Eat
+            the freshest produce from the comfort of our farmhouse.
+          </p>
 
-        <p className="hero__content__description">
-          Experience our seasonal menu in beautiful country surroundings. Eat
-          the freshest produce from the comfort of our farmhouse.
-        </p>
-
-        <Button theme="dark" text="Book a table" />
+          <Button theme="dark" text="Book a table" />
+        </div>
       </div>
     </header>
   )
