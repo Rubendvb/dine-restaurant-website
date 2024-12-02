@@ -3,6 +3,11 @@
 
 .menu-highlights-container {
   background-color: $cod-gray;
+
+  @media screen and (min-width: 1024px) {
+    position: relative;
+    transform: translateY(-10%);
+  }
 }
 
 .menu-highlights {
@@ -19,8 +24,6 @@
   }
 
   @media screen and (min-width: 1024px) {
-    position: relative;
-    transform: translateY(-10%);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 200px 165px 120px;
