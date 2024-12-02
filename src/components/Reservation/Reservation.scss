@@ -1,33 +1,45 @@
 @use '../../styles/mixins' as *;
 @use '../../styles/variables' as *;
 
-.reservation {
+.reservation-container {
   background-image: url('/images/homepage/ready-bg-mobile@2x.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 328px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  @include padding-container;
+  place-content: center;
 
   @media screen and (min-width: 768px) {
     background-image: url('/images/homepage/ready-bg-tablet@2x.jpg');
     background-position: inherit;
-    gap: 24px;
     height: 272px;
   }
 
   @media screen and (min-width: 1024px) {
     background-image: url('/images/homepage/ready-bg-desktop@2x.jpg');
+    height: 240px;
+  }
+}
 
+.reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 160rem;
+  margin: 0 auto;
+  @include padding-container;
+
+  @media screen and (min-width: 768px) {
+    gap: 24px;
+  }
+
+  @media screen and (min-width: 1024px) {
     flex-direction: row;
     justify-content: space-between;
     padding: 0 166px;
-    height: 240px;
+    height: 100%;
   }
 
   &-title {

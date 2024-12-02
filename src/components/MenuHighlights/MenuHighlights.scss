@@ -1,8 +1,13 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 
-.menu-highlights {
+.menu-highlights-container {
   background-color: $cod-gray;
+}
+
+.menu-highlights {
+  max-width: 160rem;
+  margin: 0 auto;
   @include padding-container;
   & {
     padding-top: 72px;

@@ -5,6 +5,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 160rem;
+  margin: 0 auto;
 
   @include padding-container;
   & {
@@ -81,7 +83,7 @@
     }
   }
 
-  div {
+  .events-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -168,9 +170,12 @@
     }
 
     &-wrapper {
+      place-items: center;
+
       @media screen and (min-width: 1024px) {
         order: -1;
         margin-bottom: 80px;
+        place-items: initial;
       }
     }
   }
@@ -188,6 +193,10 @@
     @media screen and (min-width: 768px) {
       @include heading-large();
       margin-bottom: 18px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      text-align: start;
     }
   }
 

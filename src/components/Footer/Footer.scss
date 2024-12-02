@@ -1,12 +1,17 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 
-.footer {
+.footer-container {
   background-color: $cod-gray;
+}
+
+.footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 42px;
+  max-width: 160rem;
+  margin: 0 auto;
 
   @include padding-container;
   & {

@@ -54,7 +54,7 @@ export function Events() {
 
   return (
     <section className="events">
-      <div>
+      <div className="events-container">
         <picture>
           <source media="(min-width: 1024px)" srcSet={imageDesktop} />
           <source media="(min-width: 768px)" srcSet={imageTablet} />
@@ -66,7 +66,7 @@ export function Events() {
         </picture>
       </div>
 
-      <div>
+      <div className="events-container">
         <ul className="events-list">
           {items.map((item, index) => (
             <li

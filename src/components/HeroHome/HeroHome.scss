@@ -3,106 +3,106 @@
 
 .hero {
   position: relative;
+  height: 748px;
+  overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    height: 992px;
+  }
 
   @media screen and (min-width: 1024px) {
     height: 820px;
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 30%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background-color: rgba(0, 0, 0, 1);
-    }
   }
 
-  &__img {
-    width: 100%;
-    filter: contrast(0.8);
-
+  &__picture {
     img {
-      height: 100%;
-      object-fit: cover;
+      width: 100%;
+      filter: contrast(0.8);
+
+      @media screen and (min-width: 1024px) {
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 
   &__content {
     position: absolute;
-    width: 100%;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: $cod-gray;
+    top: 60vw;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: -webkit-fill-available;
-    @include padding-container;
+    @include padding-sides;
     & {
       padding-top: 12px;
     }
 
     @media screen and (min-width: 768px) {
-      top: 38%;
+      top: 48vw;
       padding-top: 0;
     }
 
     @media screen and (min-width: 1024px) {
-      background-color: transparent;
       top: 0;
-      padding: 66px 166px;
-      align-items: flex-start;
-      z-index: 1;
+      width: 40%;
+      padding: 0;
+      max-width: 1440px;
     }
 
-    svg {
-      margin-bottom: 36px;
-
-      @media screen and (min-width: 1024px) {
-        margin-bottom: 154px;
-        height: 70px;
-      }
-    }
-
-    &__h1 {
-      @include heading-xl(3.2rem, 40px, $white, -0.4px);
-      text-wrap: wrap;
-      width: 200px;
+    .hero__logo {
+      margin-bottom: 3.6rem;
 
       @media screen and (min-width: 768px) {
-        @include heading-xl(4.8rem, 64px, null, -0.6px);
-        width: 390px;
-        margin-bottom: 20px;
+        margin-bottom: 3.8rem;
       }
 
       @media screen and (min-width: 1024px) {
-        @include heading-xl($color: $white);
-        text-align: start;
-        margin-bottom: 20px;
-        width: 507px;
+        position: absolute;
+        top: 8%;
+        left: 29%;
       }
     }
 
-    &__p {
-      @include text-medium(
-        $font-size: 1.6rem,
-        $line-height: 26px,
-        $color: $white
-      );
+    .hero__content__text {
+      place-items: center;
+
+      @media screen and (min-width: 1024px) {
+        position: absolute;
+        top: 32%;
+        left: 29%;
+        width: 507px;
+        place-items: start;
+      }
+    }
+
+    .hero__title {
+      @include heading-xl($font-size: 3.2rem, $line-height: 40px);
+      margin-bottom: 20px;
+
+      @media screen and (min-width: 768px) {
+        @include heading-xl($font-size: 4.8rem, $line-height: 64px);
+      }
+
+      @media screen and (min-width: 1024px) {
+        @include heading-xl($text-align: start);
+        margin-bottom: 10px;
+      }
+    }
+
+    .hero__description {
+      @include paragraph($font-size: 1.6rem, $line-height: 26px);
       margin-bottom: 52px;
 
       @media screen and (min-width: 768px) {
-        @include text-medium($font-size: 2rem, $color: $white);
-        width: 573px;
+        @include paragraph($font-size: 2rem, $line-height: 30px);
       }
 
       @media screen and (min-width: 1024px) {
-        @include text-medium($color: $white);
         text-align: start;
-        width: 445px;
-        margin-bottom: 40px;
       }
     }
   }
